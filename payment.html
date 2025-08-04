@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Legacy of BCA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40">
+                        <path d="M5 5 L5 35 L15 35 M15 5 L15 20 L35 20" stroke="#00BFFF" stroke-width="3" fill="none"/>
+                        <circle cx="18" cy="8" r="2" fill="#E040FB"/>
+                        <circle cx="25" cy="15" r="1.5" fill="#00BFFF"/>
+                        <circle cx="32" cy="23" r="1" fill="#E040FB"/>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <span class="college-name">Vidya Vikas FGC</span>
+                    <span class="fest-name">Legacy of BCA</span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://instagram.com/legacyofbca" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/919876543210" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="tel:+919876543210" class="social-icon"><i class="fas fa-phone"></i></a>
+                <a href="mailto:info@legacyofbca.com?subject=Legacy%20of%20BCA%20Inquiry&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20know%20more%20about%20Legacy%20of%20BCA%20fest." class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+            <a href="register.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Registration
+            </a>
+        </nav>
+    </header>
+
+    <!-- Payment Section -->
+    <section class="payment">
+        <div class="container">
+            <div class="payment-header">
+                <i class="fas fa-credit-card payment-icon"></i>
+                <h1>Complete Your Payment</h1>
+                <p>Secure payment for your event registration</p>
+            </div>
+
+            <div class="payment-content">
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-card">
+                        <div class="event-details">
+                            <div class="event-info">
+                                <h3 id="payment-event-name">Event Name</h3>
+                                <p id="payment-participant-name">Participant Name</p>
+                                <p id="payment-usn">USN: 1VV23CS001</p>
+                            </div>
+                            <div class="event-price">
+                                <span class="price-label">Amount</span>
+                                <span class="price-amount" id="payment-amount">₹150</span>
+                            </div>
+                        </div>
+                        <div class="price-breakdown">
+                            <div class="breakdown-item">
+                                <span>Registration Fee</span>
+                                <span id="base-amount">₹150</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Processing Fee</span>
+                                <span>₹10</span>
+                            </div>
+                            <div class="breakdown-item total">
+                                <span><strong>Total Amount</strong></span>
+                                <span><strong id="total-amount">₹160</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Methods -->
+                <div class="payment-methods">
+                    <h2>Choose Payment Method</h2>
+                    
+                    <!-- Payment Options -->
+                    <div class="payment-options">
+                        <div class="payment-option active" data-method="upi">
+                            <div class="option-header">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>UPI Payment</span>
+                                <i class="fas fa-check option-check"></i>
+                            </div>
+                            <p>Pay using UPI apps like PhonePe, Google Pay, Paytm</p>
+                        </div>
+
+                        <div class="payment-option" data-method="card">
+                            <div class="option-header">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Credit/Debit Card</span>
+                                <i class="fas fa-check option-check"></i>
+                            </div>
+                            <p>Visa, Mastercard, Rupay cards accepted</p>
+                        </div>
+
+                        <div class="payment-option" data-method="netbanking">
+                            <div class="option-header">
+                                <i class="fas fa-university"></i>
+                                <span>Net Banking</span>
+                                <i class="fas fa-check option-check"></i>
+                            </div>
+                            <p>All major banks supported</p>
+                        </div>
+                    </div>
+
+                    <!-- Payment Forms -->
+                    <div class="payment-forms">
+                        <!-- UPI Payment Form -->
+                        <div class="payment-form active" id="upi-form">
+                            <h3>UPI Payment</h3>
+                            <div class="upi-methods">
+                                <div class="upi-qr">
+                                    <h4>Scan QR Code</h4>
+                                    <div class="qr-container">
+                                        <canvas id="upi-qr-code"></canvas>
+                                        <p>Scan with any UPI app</p>
+                                    </div>
+                                </div>
+                                <div class="upi-manual">
+                                    <h4>Enter UPI ID</h4>
+                                    <div class="form-group">
+                                        <input type="text" id="upi-id" placeholder="yourname@paytm" class="upi-input">
+                                        <button class="verify-btn">Verify</button>
+                                    </div>
+                                    <p class="upi-note">Enter your UPI ID to proceed with payment</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Payment Form -->
+                        <div class="payment-form" id="card-form">
+                            <h3>Card Payment</h3>
+                            <div class="card-form-grid">
+                                <div class="form-group full-width">
+                                    <label>Card Number</label>
+                                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                                </div>
+                                <div class="form-group">
+                                    <label>Expiry Date</label>
+                                    <input type="text" id="card-expiry" placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label>CVV</label>
+                                    <input type="text" id="card-cvv" placeholder="123" maxlength="3">
+                                </div>
+                                <div class="form-group full-width">
+                                    <label>Cardholder Name</label>
+                                    <input type="text" id="card-name" placeholder="JOHN DOE">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Net Banking Form -->
+                        <div class="payment-form" id="netbanking-form">
+                            <h3>Net Banking</h3>
+                            <div class="bank-selection">
+                                <label>Select Your Bank</label>
+                                <select id="bank-select">
+                                    <option value="">Choose Bank</option>
+                                    <option value="sbi">State Bank of India</option>
+                                    <option value="hdfc">HDFC Bank</option>
+                                    <option value="icici">ICICI Bank</option>
+                                    <option value="axis">Axis Bank</option>
+                                    <option value="pnb">Punjab National Bank</option>
+                                    <option value="kotak">Kotak Mahindra Bank</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Button -->
+                    <button id="pay-now-btn" class="pay-now-btn">
+                        <i class="fas fa-shield-alt"></i>
+                        <span class="btn-text">Pay Securely</span>
+                        <span class="btn-amount" id="btn-amount">₹160</span>
+                        <div class="payment-spinner" id="payment-spinner" style="display: none;"></div>
+                    </button>
+
+                    <!-- Security Info -->
+                    <div class="security-info">
+                        <div class="security-item">
+                            <i class="fas fa-lock"></i>
+                            <span>256-bit SSL Encrypted</span>
+                        </div>
+                        <div class="security-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>PCI DSS Compliant</span>
+                        </div>
+                        <div class="security-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% Secure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

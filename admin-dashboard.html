@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard – Legacy of BCA</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header class="header">
+ <nav class="nav">
+  <div class="nav-brand">
+    <div class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+            <path d="M5 5 L5 35 L15 35 M15 5 L15 20 L35 20" stroke="#00BFFF" stroke-width="3" fill="none"/>
+            <circle cx="18" cy="8" r="2" fill="#E040FB"/>
+            <circle cx="25" cy="15" r="1.5" fill="#00BFFF"/>
+            <circle cx="32" cy="23" r="1" fill="#E040FB"/>
+        </svg>
+    </div>
+    <div class="brand-text">
+        <span class="college-name">Vidya Vikas FGC</span>
+        <span class="fest-name">Legacy of BCA</span>
+    </div>
+</div>
+
+   <button id="logout-btn" class="back-btn">Logout</button>
+ </nav>
+</header>
+
+<section class="dashboard">
+ <div class="container">
+   <h1>Admin Dashboard</h1>
+
+   <h2>Upload Student USN List (CSV)</h2>
+   <input type="file" id="csv-input" accept=".csv">
+   <button id="upload-btn" class="submit-btn" style="margin-top:10px">Upload</button>
+   <p id="upload-msg"></p>
+
+   <hr style="margin:40px 0;border-color:rgba(169,169,169,.3)">
+
+   <h2>Registrations (Mock)</h2>
+   <table id="reg-table">
+     <thead><tr><th>Name</th><th>USN</th><th>Category</th><th>Event</th></tr></thead>
+     <tbody></tbody>
+   </table>
+ </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

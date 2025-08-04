@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Legacy of BCA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+<header class="header">
+    <nav class="nav">
+        <div class="nav-brand">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40">
+                    <path d="M5 5 L5 35 L15 35 M15 5 L15 20 L35 20" stroke="#00BFFF" stroke-width="3" fill="none"/>
+                    <circle cx="18" cy="8" r="2" fill="#E040FB"/>
+                    <circle cx="25" cy="15" r="1.5" fill="#00BFFF"/>
+                    <circle cx="32" cy="23" r="1" fill="#E040FB"/>
+                </svg>
+            </div>
+            <div class="brand-text">
+                <span class="college-name">Vidya Vikas FGC</span>
+                <span class="fest-name">Legacy of BCA</span>
+            </div>
+        </div>
+        
+        <!-- ADD THIS NEW SECTION -->
+        <div class="social-icons">
+            <a href="https://instagram.com/legacyofbca" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/919876543210" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+919876543210" class="social-icon"><i class="fas fa-phone"></i></a>
+            <a href="mailto:info@legacyofbca.com?subject=Legacy%20of%20BCA%20Inquiry&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20know%20more%20about%20Legacy%20of%20BCA%20fest." class="social-icon"><i class="fas fa-envelope"></i></a>
+        </div>
+        
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </nav>
+</header>
+
+
+    <!-- Registration Section -->
+    <section class="registration">
+        <div class="container">
+            <h1 id="registration-title">Register for Event</h1>
+            <div class="registration-content">
+                <div class="event-info">
+                    <div class="event-details">
+                        <h2 id="event-name">Event Details</h2>
+                        <div id="event-rules" class="event-rules">
+                            <h3>Rules & Guidelines</h3>
+                            <ul id="rules-list">
+                                <li>Registration is mandatory for all participants</li>
+                                <li>Valid college ID required for entry</li>
+                                <li>Follow event-specific guidelines</li>
+                            </ul>
+                        </div>
+                        <div class="event-timing">
+                            <h3>Event Schedule</h3>
+                            <p id="event-date"><i class="fas fa-calendar"></i> Date: March 15-17, 2025</p>
+                            <p id="event-time"><i class="fas fa-clock"></i> Time: 9:00 AM onwards</p>
+                            <p id="event-venue"><i class="fas fa-map-marker-alt"></i> Venue: VVFGC Campus</p>
+                        </div>
+                        <div class="coordinator-info">
+                            <h3>Event Coordinator</h3>
+                            <p id="coordinator-name"><strong>Dr. Rajesh Kumar</strong></p>
+                            <p id="coordinator-contact">📧 rajesh@vvfgc.ac.in | 📱 +91 9876543210</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="registration-form-container">
+                    <form id="registration-form" class="registration-form">
+                        <h2>Registration Form</h2>
+                        
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                            <span class="error-message" id="fullName-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="usn">USN/Roll Number *</label>
+                            <input type="text" id="usn" name="usn" required placeholder="e.g., 1VV23CS001ABC" maxlength="12">
+                            <span class="error-message" id="usn-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="college">College Name *</label>
+                            <input type="text" id="college" name="college" required value="Vidya Vikas First Grade College" list="colleges">
+                            <datalist id="colleges">
+                                <option value="Vidya Vikas First Grade College">
+                                <option value="Maharaja's College">
+                                <option value="JSS College">
+                                <option value="Manasa Gangothri">
+                            </datalist>
+                            <span class="error-message" id="college-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+91 9876543210">
+                            <span class="error-message" id="phone-error"></span>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="submit-btn" disabled>
+                            <span class="btn-text">Register Now</span>
+                            <div class="spinner" id="spinner" style="display: none;"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

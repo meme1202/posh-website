@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Welcome – Legacy of BCA</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="login-landing">
+<div class="login-card">
+  <h1>Legacy of BCA 2025</h1>
+  <p class="tagline">The official tech-fest portal</p>
+
+  <!-- Admin block -->
+  <div id="admin-block">
+    <h2>Admin Login</h2>
+    <form id="admin-login-form">
+      <input type="email"  id="admin-email" placeholder="Admin email" required>
+      <input type="password" id="admin-pass"  placeholder="Password"    required>
+      <button class="submit-btn" type="submit">Login</button>
+    </form>
+    <p id="admin-error" class="error-message"></p>
+    <div class="divider"><span>or</span></div>
+  </div>
+
+  <!-- Guest button -->
+  <button id="guest-btn" class="guest-btn">I’m not an admin – Continue</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

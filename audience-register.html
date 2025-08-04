@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Audience Pass – Legacy of BCA</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header class="header">
+  <nav class="nav">
+    <div class="nav-brand">
+    <div class="logo">
+        <svg width="40" height="40" viewBox="0 0 40 40">
+            <path d="M5 5 L5 35 L15 35 M15 5 L15 20 L35 20" stroke="#00BFFF" stroke-width="3" fill="none"/>
+            <circle cx="18" cy="8" r="2" fill="#E040FB"/>
+            <circle cx="25" cy="15" r="1.5" fill="#00BFFF"/>
+            <circle cx="32" cy="23" r="1" fill="#E040FB"/>
+        </svg>
+    </div>
+    <div class="brand-text">
+        <span class="college-name">Vidya Vikas FGC</span>
+        <span class="fest-name">Legacy of BCA</span>
+    </div>
+</div>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Home</a>
+  </nav>
+</header>
+
+<section class="registration">
+  <div class="container">
+    <h1 id="aud-title">Get Your Free Audience Pass</h1>
+
+    <form id="audience-form" class="registration-form" style="max-width:480px;margin:auto">
+      <h2>Audience Registration</h2>
+
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" id="aud-name" required>
+      </div>
+
+      <div class="form-group">
+        <label>USN / ID-Card Number *</label>
+        <input type="text" id="aud-usn" maxlength="12" placeholder="1VV23CS001ABC" required>
+      </div>
+
+      <div class="form-group">
+        <label>College Email *</label>
+        <input type="email" id="aud-email" placeholder="you@vvfgc.ac.in" required>
+      </div>
+
+      <div class="form-group">
+        <label>Phone *</label>
+        <input type="tel" id="aud-phone" placeholder="+91 9876543210" required>
+      </div>
+
+      <button type="submit" class="submit-btn" id="aud-submit" disabled>
+        <span class="btn-text">Get Pass</span>
+        <div class="spinner" style="display:none"></div>
+      </button>
+    </form>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

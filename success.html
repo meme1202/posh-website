@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful - Legacy of BCA</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40">
+                        <path d="M5 5 L5 35 L15 35 M15 5 L15 20 L35 20" stroke="#00BFFF" stroke-width="3" fill="none"/>
+                        <circle cx="18" cy="8" r="2" fill="#E040FB"/>
+                        <circle cx="25" cy="15" r="1.5" fill="#00BFFF"/>
+                        <circle cx="32" cy="23" r="1" fill="#E040FB"/>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <span class="college-name">Vidya Vikas FGC</span>
+                    <span class="fest-name">Legacy of BCA</span>
+                </div>
+            </div>
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-home"></i> Back to Home
+            </a>
+        </nav>
+    </header>
+
+    <!-- Success Section -->
+    <section class="success">
+        <div class="container">
+            <div class="success-content">
+                <div class="success-message">
+    <i class="fas fa-check-circle success-icon"></i>
+    <h1>Registration Successful!</h1>
+    <div id="payment-confirmation" style="display: none;">
+        <div class="payment-success">
+            <i class="fas fa-credit-card payment-success-icon"></i>
+            <h3>Payment Confirmed</h3>
+            <p><strong>Transaction ID:</strong> <span id="transaction-id"></span></p>
+            <p><strong>Amount Paid:</strong> ₹<span id="paid-amount"></span></p>
+            <p><strong>Payment Method:</strong> <span id="payment-method"></span></p>
+        </div>
+    </div>
+    <p>Congratulations! You have successfully registered for the event. Your e-ticket has been generated below.</p>
+    <p class="instruction">Please save your ticket and present it at the event venue.</p>
+</div>
+
+
+                <div class="ticket-container">
+                    <div id="e-ticket" class="e-ticket">
+                        <div class="ticket-header">
+                            <div class="ticket-logo">
+                                <svg width="60" height="60" viewBox="0 0 40 40">
+                                    <path d="M5 5 L5 35 L15 35 M15 5 L15 20 L35 20" stroke="#00BFFF" stroke-width="3" fill="none"/>
+                                    <circle cx="18" cy="8" r="2" fill="#E040FB"/>
+                                    <circle cx="25" cy="15" r="1.5" fill="#00BFFF"/>
+                                    <circle cx="32" cy="23" r="1" fill="#E040FB"/>
+                                </svg>
+                            </div>
+                            <div class="ticket-title">
+                                <h2>Legacy of BCA 2025</h2>
+                                <p>Vidya Vikas First Grade College</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ticket-body">
+                            <div class="ticket-info">
+                                <div class="info-row">
+                                    <span class="label">Event:</span>
+                                    <span class="value" id="ticket-event">Event Name</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Name:</span>
+                                    <span class="value" id="ticket-name">Participant Name</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">USN:</span>
+                                    <span class="value" id="ticket-usn">USN Number</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Date:</span>
+                                    <span class="value">March 15-17, 2025</span>
+                                </div>
+                                <div class="info-row">
+                                    <span class="label">Venue:</span>
+                                    <span class="value">VVFGC Campus, Mysore</span>
+                                </div>
+                            </div>
+                            <div class="ticket-qr">
+                                <canvas id="qr-code"></canvas>
+                                <p>Scan QR Code</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ticket-footer">
+                            <p>Please bring a valid ID along with this ticket</p>
+                        </div>
+                    </div>
+                    
+                    <button id="download-ticket" class="download-btn">
+                        <i class="fas fa-download"></i> Download Your Ticket
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
