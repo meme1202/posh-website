@@ -164,7 +164,6 @@ body {
     text-shadow: 0 0 10px rgba(234, 67, 53, 0.7);
 }
 
-
 .back-btn {
     display: flex;
     align-items: center;
@@ -899,168 +898,6 @@ body {
     box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
 }
 
-/* Responsive Design */
-/* MOBILE HEADER FIX - Stronger version */
-@media (max-width: 768px) {
-    /* Force body to have top margin */
-    body {
-        margin-top: 80px !important;
-        padding-top: 0 !important;
-    }
-    
-    /* Override all main sections */
-    .hero {
-        padding-top: 40px !important;
-        margin-top: 0 !important;
-        height: calc(100vh - 80px) !important;
-    }
-    
-    .registration {
-        padding-top: 60px !important;
-        margin-top: 0 !important;
-    }
-    
-    .payment {
-        padding-top: 60px !important;
-        margin-top: 0 !important;
-    }
-    
-    .success {
-        padding-top: 60px !important;
-        margin-top: 0 !important;
-    }
-    
-    .about, .events, .gallery {
-        padding-top: 60px !important;
-        margin-top: 0 !important;
-    }
-    
-    /* Fix header height on mobile */
-    .header {
-        height: 80px !important;
-    }
-    
-    .nav {
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 1rem;
-        min-height: 80px;
-    }
-    
-    .nav-brand {
-        margin-bottom: 0.5rem;
-    }
-    
-    .social-icons {
-        justify-content: center;
-        margin-top: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Extra fix for small phones */
-    body {
-        margin-top: 90px !important;
-    }
-    
-    .header {
-        height: 90px !important;
-    }
-    
-    .nav {
-        min-height: 90px;
-    }
-}
-
-    
-    .nav-links {
-        gap: 1rem;
-    }
-    
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
-        height: auto;
-        min-height: 100vh;
-    }
-    
-    .hero-content {
-        margin-bottom: 2rem;
-    }
-    
-    .carousel-container {
-        height: 300px;
-    }
-    
-    .carousel {
-        width: 250px;
-        height: 300px;
-    }
-    
-    .registration-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .events-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .stats {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .ticket-body {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-    
-    .about h2,
-    .events h2,
-    .gallery h2 {
-        font-size: 2rem;
-    }
-    
-    .event-card,
-    .event-info,
-    .registration-form-container {
-        padding: 1.5rem;
-    }
-    
-    .e-ticket {
-        padding: 1.5rem;
-    }
-    
-    .nav-brand {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
-    
-    .social-icons {
-        justify-content: center;
-    }
-}
 /* Payment Page Styles */
 .payment {
     padding: 120px 0 50px;
@@ -1153,9 +990,6 @@ body {
     font-weight: 700;
     color: #E040FB;
 }
-
-
-
 
 .breakdown-item {
     display: flex;
@@ -1300,11 +1134,6 @@ body {
     margin-top: 0.5rem;
 }
 
-.form-group {
-    position: relative;
-    margin-bottom: 1rem;
-}
-
 .upi-input {
     width: 70%;
     padding: 12px;
@@ -1348,13 +1177,6 @@ body {
 
 .form-group.full-width {
     grid-column: 1 / -1;
-}
-
-.form-group label {
-    display: block;
-    color: #F5F5F5;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
 }
 
 .form-group input,
@@ -1448,8 +1270,286 @@ body {
     font-size: 1rem;
 }
 
-/* Responsive Design for Payment */
+/* Payment Confirmation Styles */
+.payment-success {
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.payment-success-icon {
+    color: #00ff88;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.payment-success h3 {
+    color: #00ff88;
+    margin-bottom: 1rem;
+}
+
+.payment-success p {
+    color: #F5F5F5;
+    margin-bottom: 0.5rem;
+}
+
+/* Audience & Admin additions */
+.aud-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #1A1A2E;
+    color: #00BFFF;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: .3s;
+    border: 1px solid #00BFFF;
+}
+
+.aud-btn:hover {
+    background: #00BFFF;
+    color: #0A0A10;
+}
+
+/* admin login */
+.admin-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0A0A10;
+}
+
+.login-box {
+    background: #1A1A2E;
+    border: 1px solid #00BFFF;
+    border-radius: 20px;
+    padding: 40px;
+    width: 320px;
+    text-align: center;
+}
+
+.login-box h1 {
+    color: #00BFFF;
+    margin-bottom: 20px;
+}
+
+/* dashboard */
+.dashboard h1 {
+    color: #00BFFF;
+    margin-bottom: 20px;
+}
+
+#reg-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #F5F5F5;
+}
+
+#reg-table th,
+#reg-table td {
+    border: 1px solid rgba(169, 169, 169, .2);
+    padding: 8px;
+    text-align: left;
+}
+
+#reg-table th {
+    background: #1A1A2E;
+}
+
+/* Landing login page */
+.login-landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0A0A10;
+}
+
+.login-card {
+    background: #1A1A2E;
+    border: 1px solid #00BFFF;
+    border-radius: 20px;
+    padding: 40px;
+    width: 320px;
+    text-align: center;
+}
+
+.login-card h1 {
+    background: linear-gradient(45deg, #00BFFF, #E040FB);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.login-card .tagline {
+    color: #A9A9A9;
+    margin-bottom: 25px;
+}
+
+.login-card input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(169, 169, 169, .3);
+    background: #0A0A10;
+    color: #F5F5F5;
+}
+
+.guest-btn {
+    margin-top: 10px;
+    background: #00BFFF;
+    color: #0A0A10;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.divider {
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider span {
+    background: #1A1A2E;
+    padding: 0 10px;
+    color: #A9A9A9;
+}
+
+.divider:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(169, 169, 169, .3);
+}
+
+/* ========== FINAL CLEAN RESPONSIVE DESIGN ========== */
+
+/* Desktop - Ensure normal behavior */
+@media (min-width: 769px) {
+    body {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    .hero {
+        padding-top: 0 !important;
+        height: 100vh !important;
+    }
+    
+    .registration, .payment, .success {
+        padding-top: 120px !important;
+    }
+    
+    .nav {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 1rem 2rem !important;
+    }
+}
+
+/* Mobile - Fix header and content positioning */
 @media (max-width: 768px) {
+    /* Remove body margin that affects desktop */
+    body {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* Push content down below fixed header */
+    .hero {
+        padding-top: 140px !important;
+        height: calc(100vh - 60px) !important;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .registration, .payment, .success, .about, .events, .gallery, .dashboard {
+        padding-top: 140px !important;
+    }
+    
+    /* Fix mobile header layout - keep everything organized */
+    .nav {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 1rem !important;
+        min-height: 70px;
+    }
+    
+    .nav-brand {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+    
+    .social-icons {
+        display: flex !important;
+        gap: 0.8rem !important;
+        margin: 0 !important;
+    }
+    
+    .nav-links {
+        display: none; /* Hide nav links on mobile to save space */
+    }
+    
+    /* Make header compact on mobile */
+    .header {
+        height: auto !important;
+        min-height: 70px !important;
+    }
+    
+    /* Mobile responsive adjustments */
+    .hero-content {
+        margin-bottom: 2rem;
+    }
+    
+    .carousel-container {
+        height: 300px;
+    }
+    
+    .carousel {
+        width: 250px;
+        height: 300px;
+    }
+    
+    .registration-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .ticket-body {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    /* Payment page mobile fixes */
     .payment-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1480,12 +1580,51 @@ body {
 }
 
 @media (max-width: 480px) {
-    .payment {
-        padding: 100px 0 30px;
+    .hero, .registration, .payment, .success, .about, .events, .gallery, .dashboard {
+        padding-top: 150px !important;
     }
     
-    .summary-card,
-    .payment-methods {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .about h2, .events h2, .gallery h2 {
+        font-size: 2rem;
+    }
+    
+    .event-card, .event-info, .registration-form-container {
+        padding: 1.5rem;
+    }
+    
+    .e-ticket {
+        padding: 1.5rem;
+    }
+    
+    .nav-brand {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+        gap: 0.6rem !important;
+    }
+    
+    /* Payment page small mobile fixes */
+    .payment {
+        padding-top: 150px !important;
+    }
+    
+    .summary-card, .payment-methods {
         padding: 1.5rem;
     }
     
@@ -1507,110 +1646,5 @@ body {
     .verify-btn {
         width: 100%;
         margin-left: 0;
-    }
-}
-/* ... all your existing CSS ... */
-
-/* Responsive Design */
-@media (max-width: 480px) {
-    /* ... existing responsive styles ... */
-}
-
-/* Payment Confirmation Styles - ADD THIS AT THE END */
-.payment-success {
-    background: rgba(0, 255, 136, 0.1);
-    border: 1px solid rgba(0, 255, 136, 0.3);
-    border-radius: 15px;
-    padding: 1.5rem;
-    margin: 1rem 0;
-}
-
-.payment-success-icon {
-    color: #00ff88;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.payment-success h3 {
-    color: #00ff88;
-    margin-bottom: 1rem;
-}
-
-.payment-success p {
-    color: #F5F5F5;
-    margin-bottom: 0.5rem;
-}
-/* ---------- Audience & Admin additions ---------- */
-.aud-btn{
- display:inline-block;
- margin-top:10px;
- background:#1A1A2E;
- color:#00BFFF;
- padding:10px 20px;
- border-radius:25px;
- font-weight:600;
- transition:.3s;
- border:1px solid #00BFFF;
-}
-.aud-btn:hover{background:#00BFFF;color:#0A0A10}
-
-/* admin login */
-.admin-login{
- display:flex;justify-content:center;align-items:center;
- min-height:100vh;background:#0A0A10;
-}
-.login-box{
- background:#1A1A2E;border:1px solid #00BFFF;border-radius:20px;
- padding:40px;width:320px;text-align:center
-}
-.login-box h1{color:#00BFFF;margin-bottom:20px}
-
-/* dashboard */
-.dashboard h1{color:#00BFFF;margin-bottom:20px}
-#reg-table{width:100%;border-collapse:collapse;color:#F5F5F5}
-#reg-table th,#reg-table td{border:1px solid rgba(169,169,169,.2);padding:8px;text-align:left}
-#reg-table th{background:#1A1A2E}
-/* === Landing login page === */
-.login-landing{
-  display:flex;justify-content:center;align-items:center;min-height:100vh;
-  background:#0A0A10;
-}
-.login-card{
-  background:#1A1A2E;border:1px solid #00BFFF;border-radius:20px;
-  padding:40px;width:320px;text-align:center
-}
-.login-card h1{
-  background:linear-gradient(45deg,#00BFFF,#E040FB);
-  -webkit-background-clip:text;
-  background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin-bottom:10px
-}
-.login-card .tagline{color:#A9A9A9;margin-bottom:25px}
-.login-card input{width:100%;margin-bottom:10px;padding:12px;border-radius:10px;border:1px solid rgba(169,169,169,.3);background:#0A0A10;color:#F5F5F5}
-.guest-btn{margin-top:10px;background:#00BFFF;color:#0A0A10;padding:12px 20px;border:none;border-radius:10px;font-weight:700;cursor:pointer}
-.divider{margin:20px 0;position:relative}
-.divider span{background:#1A1A2E;padding:0 10px;color:#A9A9A9}
-.divider:before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:rgba(169,169,169,.3)}
-/* Fix for mobile header covering content */
-@media (max-width: 768px) {
-    .hero {
-        padding-top: 120px !important;
-    }
-    
-    .registration {
-        padding-top: 140px !important;
-    }
-    
-    .payment {
-        padding-top: 140px !important;
-    }
-    
-    .success {
-        padding-top: 140px !important;
-    }
-    
-    .dashboard {
-        padding-top: 140px !important;
     }
 }
